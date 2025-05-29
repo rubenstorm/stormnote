@@ -92,7 +92,7 @@ If **StormNote** saved you time or brought joy to your site, consider zapping me
 👉 **[Zap via Coinos](https://coinos.io/rubenstorm)**
 Or scan this QR code with your Lightning wallet:
 
-[Coinos Zap profile](https://coinos.io/rubenstorm)
+👉 **[Coinos Zap profile](https://coinos.io/rubenstorm)**
 
 
 Thanks for supporting open-source! 🖤
