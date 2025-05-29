@@ -1,0 +1,106 @@
+{{/* 
+  StormNote v1.0.0
+  A modern, colorful Hugo shortcode for alerts and notes
+  Created by Ruben Storm — github.com/rubenstorm
+  Usage:
+    {{< stormnote type="warning" title="Caution!" >}}Your message{{< /stormnote >}}
+*/}}
+
+{{ $type := .Get "type" | default "info" }}
+{{ $sntitle := .Get "sntitle" | default (title $type) }}
+
+<style>
+  .stormnote-box {
+    display: flex;
+    gap: 1rem;
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    font-family: system-ui, sans-serif;
+    align-items: flex-start;
+    transition: background 0.3s ease;
+  }
+
+  .stormnote-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-top: 0.1rem;
+  }
+
+  .stormnote-content {
+    flex: 1;
+  }
+
+  .stormnote-title {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+
+  .stormnote-content p {
+    margin: 0;
+  }
+
+  .stormnote-info {
+    background-color: #e0f2ff;
+    color: #055160;
+  }
+
+  .stormnote-warning {
+    background-color: #fff4d6;
+    color: #7c4a03;
+  }
+
+  .stormnote-success {
+    background-color: #d3f9d8;
+    color: #255c2f;
+  }
+
+  .stormnote-error {
+    background-color: #fde2e2;
+    color: #611a15;
+  }
+
+  .stormnote-note {
+    background-color: #f3f0ff;
+    color: #4b3c78;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .stormnote-info {
+      background-color: #13334c;
+      color: #cceeff;
+    }
+    .stormnote-warning {
+      background-color: #5e4200;
+      color: #fff2c0;
+    }
+    .stormnote-success {
+      background-color: #183d23;
+      color: #c9f7cd;
+    }
+    .stormnote-error {
+      background-color: #471919;
+      color: #ffcccc;
+    }
+    .stormnote-note {
+      background-color: #2c2357;
+      color: #dad2ff;
+    }
+  }
+</style>
+
+<div class="stormnote-box stormnote-{{ $type }}">
+  <div class="stormnote-icon">
+    {{- if eq $type "info" }}💡{{ end }}
+    {{- if eq $type "warning" }}⚠️{{ end }}
+    {{- if eq $type "success" }}✅{{ end }}
+    {{- if eq $type "error" }}❌{{ end }}
+    {{- if eq $type "note" }}📝{{ end }}
+  </div>
+  <div class="stormnote-content">
+    <span class="stormnote-title">{{ $sntitle }}</span>
+    <div class="stormnote-body">{{ .Inner | markdownify }}</div>
+  </div>
+</div>
