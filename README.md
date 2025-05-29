@@ -6,10 +6,6 @@ Created with ❤️ by [Ruben Storm](https://github.com/rubenstorm)
 
 ---
 
-![StormNote Banner](/rubenstorm/stormnote/refs/heads/main/static/images/stormnote-banner.png) <!-- Replace with your actual image path -->
-
----
-
 ## 🎯 Features
 
 - 🎨 Flat & colorful alert box styles
@@ -67,7 +63,7 @@ Great job! You've successfully implemented **StormNote**.
 
 ---
 
-## 📚 Available Types
+### 📚 Available Types
 
 | Type      | Emoji | Color Theme          | Ideal For                              |
 | --------- | ----- | -------------------- | -------------------------------------- |
@@ -98,7 +94,6 @@ Or scan this QR code with your Lightning wallet:
 
 [Coinos Zap profile](https://coinos.io/rubenstorm)
 
-![Scan to Zap](/rubenstorm/stormnote/refs/heads/main/static/images/rubenstorm@coinos.io-qr.gif)
 
 Thanks for supporting open-source! 🖤
 
